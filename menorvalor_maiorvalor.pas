@@ -7,8 +7,8 @@ Begin
   	maior_valor := num;       
   	while(num <> 0) do  
   		begin
-  			if(menor_valor < num) and (menor_valor <> 0) then    
-  				menor_valor := menor_valor;                                 
+  			if(menor_valor > num) and (menor_valor <> 0) then    
+  				menor_valor := num;                                 
   			if(maior_valor < num) then
 					maior_valor := num ;
   			writeln('Escreva um valor inteiro');
