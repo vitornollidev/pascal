@@ -1,0 +1,70 @@
+Program Pzim ;    
+var sexo: string;
+idade : integer;
+pessoa : integer;
+totalIdade : integer;
+sexoMasculino : real;
+sexoFeminino : real;
+maiorMasculino : integer;
+menorFeminino : integer;
+Begin
+  	writeln('Escreva seu sexo');
+		readln(sexo);
+		if(sexo = 'n') then
+			BEGIN
+			   writeln('Sexo Inválido');
+			END
+		else	
+			BEGIN
+				writeln('Escreva sua idade');
+				readln(idade);
+				if(sexo = 'm')then
+					BEGIN
+					    sexoMasculino := 1;
+					    maiorMasculino := idade;
+					END;	
+				if(sexo = 'f')then
+					BEGIN
+				    sexoFeminino := 1;
+				    menorFeminino := idade;
+					END;
+				pessoa := 1;
+				totalIdade := idade;
+				while(sexo <> 'n') do
+					BEGIN
+					    writeln('Escreva seu sexo');
+					    readln(sexo);
+					    if(sexo = 'n') then
+					    	BEGIN
+					    	   writeln('A média das idades das pessoas é ' , totalIdade/pessoa , ' anos ');
+					    	   writeln('O percentual de pessoas do sexo masculino é ' , (sexoMasculino * 100)/pessoa , ' % ');
+					    	   writeln('O percentual de pessoas do sexo feminino é ' , (sexoFeminino * 100)/pessoa , ' % ');
+					    	   writeln('A maior idade masculina é ' , maiorMasculino , ' anos ');
+					    	   writeln('A menor idade feminina é ' , menorFeminino , ' anos ' );
+					    	END
+					   	else
+					   			BEGIN
+							   			if(sexo = 'm') then
+							   				BEGIN
+							   			   	sexoMasculino :=  sexoMasculino +1;
+							   				END;
+							   			if(sexo = 'f') then
+							   				BEGIN
+							   			   sexoFeminino :=  sexoFeminino +1;
+							   				END;
+										writeln('Escreva sua idade');
+										readln(idade);
+										if(sexo = 'm') and (maiorMasculino < idade) then
+											BEGIN
+													maiorMasculino := idade;
+											END;
+										if(sexo = 'f') and (menorFeminino > idade) or (menorFeminino = 0) then
+											BEGIN
+											    menorFeminino := idade;
+											END;	
+										pessoa := pessoa + 1;
+										totalIdade := totalIdade + idade;
+								END;	
+					END;  	
+			END;	
+End.
