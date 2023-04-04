@@ -1,0 +1,91 @@
+Program Pzim ;    
+var voto: integer;
+candidato1 : integer;
+candidato2 : integer;
+candidato3 : integer;
+candidato4 : integer;
+nulo: integer;
+branco : integer;
+totalVotos : integer;
+Begin
+	   writeln('Qual o seu voto?');
+	   readln(voto);
+	   if(voto = 0) then                                                                                                
+	   		BEGIN
+	   		   writeln('Você não pode finalizar antes de votar');
+	   		END;
+	   if(voto = 1) then
+			    				BEGIN
+			    				    candidato1 := candidato1 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+			    			if(voto = 2) then
+			    				BEGIN
+			    				    candidato2 := candidato2 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+								if(voto = 3) then
+			    				BEGIN
+			    				    candidato3 := candidato3 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;	
+								if(voto = 4) then
+			    				BEGIN
+			    				    candidato4 := candidato4 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+			    			if(voto = 5) then
+									BEGIN
+									    nulo := nulo + 1;
+									    totalVotos := totalVotos + 1;
+									END;	
+								if(voto = 6) then
+									BEGIN
+									    branco := branco + 1;
+									    totalVotos := totalVotos + 1;
+									END;		
+			    while(voto <> 0) do
+			    	BEGIN
+			    			writeln('Qual seu voto?');
+			    			readln(voto);
+			    			if(voto = 1) then
+			    				BEGIN
+			    				    candidato1 := candidato1 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+			    			if(voto = 2) then
+			    				BEGIN
+			    				    candidato2 := candidato2 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+								if(voto = 3) then
+			    				BEGIN
+			    				    candidato3 := candidato3 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;	
+								if(voto = 4) then
+			    				BEGIN
+			    				    candidato4 := candidato4 + 1;
+			    				    totalVotos := totalVotos + 1;
+			    				END;
+			    			if(voto = 5) then
+									BEGIN
+									    nulo := nulo + 1;
+									    totalVotos := totalVotos + 1;
+									END;	
+								if(voto = 6) then
+									BEGIN
+									    branco := branco + 1;
+									    totalVotos := totalVotos + 1;
+									END;			
+			    			if(voto = 0) then
+			    				BEGIN
+			    				    writeln('O Canditado 1 recebeu ' , candidato1 , ' votos que corresponde a ' , (candidato1 * 100)/totalVotos , ' %');
+			    				    writeln('O Canditado 2 recebeu ' , candidato2 , ' votos que corresponde a ' , (candidato2 * 100)/totalVotos , ' %');
+			    				    writeln('O Canditado 3 recebeu ' , candidato3 , ' votos que corresponde a ' , (candidato3 * 100)/totalVotos , ' %');
+			    				    writeln('O Canditado 4 recebeu ' , candidato4 , ' votos que corresponde a ' , (candidato4 * 100)/totalVotos , ' %');
+		                 	writeln('O total de votos nulos é ' , nulo , ' que corresponde a ' , (nulo *100)/totalVotos, ' %');
+		                 	writeln('O total de votos em brancos é ' , branco , ' que corresponde a ' , (branco *100)/totalVotos , ' %');
+			    				END;
+			    	END;	
+End.
